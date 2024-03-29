@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    package="com.dndtools.android.dndtools"
+    android:versionName="1.0">
+
+      <!-- Specify the minimum SDK version -->
+    <uses-sdk android:minSdkVersion="30" />
+
+    <!-- Specify the target SDK version -->
+    <uses-sdk android:targetSdkVersion="34" />
+
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:hasCode="false"
+        android:label="DnD Tools">
+
+        <activity
+            android:name="android.app.NativeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:label="DnD Tools">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="native-activity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
