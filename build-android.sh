@@ -42,6 +42,7 @@ export PATH="$ANDROID_SDK_ROOT/build-tools/$ANDROID_BUILDTOOLS_VERSION:$PATH"
 # first, try to install missing sdk components
 if command -v sdkmanager &> /dev/null
 then
+    mkdir -p "${ANDROID_HOME}"
     yes | sdkmanager --sdk_root=${ANDROID_HOME} --licenses
     sdkmanager --sdk_root=${ANDROID_HOME} "build-tools;${ANDROID_BUILDTOOLS_VERSION}" "cmake;3.22.1" "ndk;${ANDROID_NDK_VERSION}" "platform-tools" "platforms;android-${ANDROID_TARGET_PLATFORM}" "tools"
 else
